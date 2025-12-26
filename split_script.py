@@ -22,13 +22,13 @@ for split in SPLITS:
 for cls in os.listdir(RAW_DIR):
     cls_path = os.path.join(RAW_DIR, cls)
 
-    #skip non-class folders
+    
     if not os.path.isdir(cls_path):
         continue
 
     print(f"\nProcessing class: {cls}")
 
-    #take image files
+    
     images = [
         f for f in os.listdir(cls_path)
         if f.lower().endswith(IMG_EXTENSIONS)
