@@ -13,7 +13,7 @@ if gpus:
     for gpu in gpus:
         tf.config.experimental.set_memory_growth(gpu, True)
 else:
-    print("GPU NOT detected — training will use CPU")
+    print("GPU not detected")
 
 tf.config.threading.set_intra_op_parallelism_threads(2)
 tf.config.threading.set_inter_op_parallelism_threads(2)
